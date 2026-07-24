@@ -1,0 +1,63 @@
+name: hikimar_yara
+description: "Professional Hausa Kids Storytelling App"
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.12.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+
+  # State Management
+  provider: ^6.1.5
+
+  # Local Storage
+  shared_preferences: ^2.5.5
+
+  # Fonts
+  google_fonts: ^6.3.1
+
+  # Images
+  cached_network_image: ^3.4.1
+  flutter_svg: ^2.2.1
+
+  # Animations
+  lottie: ^3.3.2
+  flutter_staggered_animations: ^1.1.1
+
+  # Audio Player
+  just_audio: ^0.10.6
+
+  # Firebase
+  firebase_core: ^4.1.1
+  firebase_auth: ^6.0.2
+  cloud_firestore: ^6.0.1
+  firebase_storage: ^13.0.1
+  animate_do: ^5.1.0
+  smooth_page_indicator: ^2.0.1
+  audio_session: ^0.2.4
+  share_plus: ^11.0.0
+  url_launcher: ^6.3.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^6.0.0
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/audio/
+    - assets/animations/
+
+  
