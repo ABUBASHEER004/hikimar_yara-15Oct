@@ -1,8 +1,8 @@
 name: hikimar_yara
-description: "Professional Hausa Kids Storytelling App"
+description: "Premium bilingual Hausa and English educational storytelling app for children"
 publish_to: "none"
 
-version: 1.0.0+1
+version: 2.0.0+2
 
 environment:
   sdk: ^3.12.2
@@ -32,6 +32,7 @@ dependencies:
 
   # Audio Player
   just_audio: ^0.10.6
+  flutter_tts: ^4.2.3
 
   # Firebase
   firebase_core: ^4.1.1
@@ -57,7 +58,6 @@ flutter:
   assets:
     - assets/images/
     - assets/icons/
-    - assets/audio/
     - assets/animations/
 
   

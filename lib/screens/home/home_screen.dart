@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import '../../core/constants/app_colors.dart';
 import '../../data/category_data.dart';
 import '../../data/sample_stories.dart';
 import '../../models/story.dart';
@@ -9,6 +9,7 @@ import '../../widgets/greeting_header.dart';
 import '../../widgets/search_bar_widget.dart';
 import '../../widgets/section_title.dart';
 import '../../widgets/story_card.dart';
+import '../story/story_details_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -18,59 +19,41 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  String selectedCategory = "All";
-
-  final ScrollController _storiesController = ScrollController();
-final ScrollController _categoriesController = ScrollController();
-
-@override
-void dispose() {
-  _storiesController.dispose();
-  _categoriesController.dispose();
-  super.dispose();
-}
-
+  String selectedCategory = 'All';
 
   List<Story> get filteredStories {
-  final list = selectedCategory == "All"
-      ? stories
-      : stories.where((s) => s.category == selectedCategory).toList();
+    if (selectedCategory == 'All') {
+      return stories;
+    }
 
-  final seen = <String>{};
-
-  return list.where((story) {
-    return seen.add(story.title);
-  }).toList();
-}
-
-  Future<void> refreshStories() async {
-    await Future.delayed(const Duration(seconds: 1));
-    setState(() {});
+    return stories
+        .where((story) => story.category == selectedCategory)
+        .toList();
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: const Color(0xffF8FFF8),
+    final featured = stories.isNotEmpty ? stories.first : null;
 
+    return Scaffold(
       body: SafeArea(
         child: RefreshIndicator(
-          onRefresh: refreshStories,
-
+          onRefresh: () async {
+            setState(() {});
+          },
           child: SingleChildScrollView(
             physics: const AlwaysScrollableScrollPhysics(),
-            padding: const EdgeInsets.all(20),
-
+            padding: const EdgeInsets.fromLTRB(18, 16, 18, 110),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-
               children: [
                 const GreetingHeader(),
 
-                const SizedBox(height: 25),
+                const SizedBox(height: 20),
 
+                // Search
                 InkWell(
-                  borderRadius: BorderRadius.circular(16),
+                  borderRadius: BorderRadius.circular(20),
                   onTap: () {
                     Navigator.push(
                       context,
@@ -84,73 +67,103 @@ void dispose() {
                   ),
                 ),
 
-                const SizedBox(height: 30),
+                const SizedBox(height: 23),
 
-                const SectionTitle(title: "Categories"),
+                // Featured story
+                if (featured != null) _hero(context, featured),
 
-                const SizedBox(height: 15),
+                const SizedBox(height: 28),
+
+                // Categories
+                const SectionTitle(
+                  title: 'Explore categories',
+                  subtitle: 'Hausa culture, faith, character and fun',
+                ),
+
+                const SizedBox(height: 13),
 
                 SizedBox(
-  height: 140,
+                  height: 135,
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    children: [
+                      CategoryCard(
+                        icon: Icons.auto_stories_rounded,
+                        title: 'Duka',
+                        subtitle: 'All stories',
+                        color: AppColors.primary,
+                        isSelected: selectedCategory == 'All',
+                        onTap: () {
+                          setState(() {
+                            selectedCategory = 'All';
+                          });
+                        },
+                      ),
 
-  child: ListView(
-  controller: _categoriesController,
-  scrollDirection: Axis.horizontal,
-  physics: const BouncingScrollPhysics(),
-
-    children: [
-
-      CategoryCard(
-        emoji: "📚",
-        title: "All",
-        isSelected: selectedCategory == "All",
-        onTap: () {
-          setState(() {
-            selectedCategory = "All";
-          });
-        },
-      ),
-
-      ...categories.map(
-        (category) {
-          return CategoryCard(
-            emoji: category.emoji,
-            title: category.title,
-            isSelected:
-                selectedCategory == category.title,
-            onTap: () {
-              setState(() {
-                selectedCategory = category.title;
-              });
-            },
-          );
-        },
-      ),
-    ],
-  ),
-),
-                const SizedBox(height: 30),
-
-                buildStorySection(
-                  title: "Stories",
-                  storyList: filteredStories,
+                      ...categories.map(
+                        (category) => CategoryCard(
+                          icon: category.icon,
+                          title: category.title,
+                          subtitle: category.subtitle,
+                          color: category.color,
+                          isSelected:
+                              selectedCategory == category.title,
+                          onTap: () {
+                            setState(() {
+                              selectedCategory = category.title;
+                            });
+                          },
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
 
-                const SizedBox(height: 30),
+                const SizedBox(height: 28),
 
-                buildStorySection(
-                  title: "Continue Reading",
-                  storyList: filteredStories,
+                // Stories
+                SectionTitle(
+                  title: selectedCategory == 'All'
+                      ? 'Sabbin labarai'
+                      : selectedCategory,
+                  subtitle:
+                      '${filteredStories.length} stories • Hausa + English',
                 ),
 
-                const SizedBox(height: 30),
+                const SizedBox(height: 13),
 
-                buildStorySection(
-                  title: "Popular Stories",
-                  storyList: filteredStories,
+                if (filteredStories.isEmpty)
+                  _emptyCategoryState()
+                else
+                  SizedBox(
+                    height: 310,
+                    child: ListView.separated(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: filteredStories.length,
+                      separatorBuilder: (_, __) =>
+                          const SizedBox(width: 14),
+                      itemBuilder: (_, index) {
+                        return SizedBox(
+                          width: 205,
+                          child: StoryCard(
+                            story: filteredStories[index],
+                          ),
+                        );
+                      },
+                    ),
+                  ),
+
+                const SizedBox(height: 28),
+
+                // Bilingual learning section
+                const SectionTitle(
+                  title: 'Learn while you listen',
+                  subtitle: 'Read it, hear it, remember it',
                 ),
 
-                const SizedBox(height: 40),
+                const SizedBox(height: 13),
+
+                _learningBanner(),
               ],
             ),
           ),
@@ -159,87 +172,247 @@ void dispose() {
     );
   }
 
-  Widget categoryChip(
-    String title, {
-    String emoji = "📚",
-  }) {
-    final selected = selectedCategory == title;
-
+  Widget _hero(BuildContext context, Story story) {
     return GestureDetector(
       onTap: () {
-        setState(() {
-          selectedCategory = title;
-        });
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (_) => StoryDetailsScreen(story: story),
+          ),
+        );
       },
+      child: Container(
+        height: 225,
+        clipBehavior: Clip.antiAlias,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(28),
+          boxShadow: [
+            BoxShadow(
+              color: AppColors.primary.withValues(alpha: 0.18),
+              blurRadius: 25,
+              offset: const Offset(0, 12),
+            ),
+          ],
+        ),
+        child: Stack(
+          fit: StackFit.expand,
+          children: [
+            // Story image
+            Image.asset(
+              story.image,
+              fit: BoxFit.cover,
+              errorBuilder: (_, __, ___) {
+                return Container(
+                  color: AppColors.primary.withValues(alpha: 0.15),
+                  child: const Center(
+                    child: Icon(
+                      Icons.auto_stories_rounded,
+                      size: 60,
+                      color: AppColors.primary,
+                    ),
+                  ),
+                );
+              },
+            ),
 
-      child: AnimatedContainer(
-        duration: const Duration(milliseconds: 250),
+            // Dark overlay
+            Container(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [
+                    Colors.black.withValues(alpha: 0.05),
+                    Colors.black.withValues(alpha: 0.82),
+                  ],
+                ),
+              ),
+            ),
 
-        margin: const EdgeInsets.only(right: 12),
+            // Content
+            Positioned(
+              left: 20,
+              right: 20,
+              bottom: 18,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text(
+                    'LABARIN YAU • STORY OF THE DAY',
+                    style: TextStyle(
+                      color: Color(0xffFDE68A),
+                      fontSize: 10,
+                      fontWeight: FontWeight.w900,
+                      letterSpacing: 1.2,
+                    ),
+                  ),
 
-        child: CategoryCard(
-          emoji: emoji,
-          title: title,
+                  const SizedBox(height: 6),
+
+                  Text(
+                    story.title,
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 25,
+                      fontWeight: FontWeight.w900,
+                    ),
+                  ),
+
+                  const SizedBox(height: 5),
+
+                  Text(
+                    story.description,
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(
+                      color: Colors.white70,
+                      fontSize: 12,
+                      height: 1.35,
+                    ),
+                  ),
+
+                  const SizedBox(height: 9),
+
+                  Row(
+                    children: [
+                      const Icon(
+                        Icons.play_circle_fill_rounded,
+                        color: Colors.white,
+                        size: 22,
+                      ),
+                      const SizedBox(width: 6),
+                      Flexible(
+                        child: Text(
+                          'Read & listen • ${story.duration}',
+                          overflow: TextOverflow.ellipsis,
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.w700,
+                            fontSize: 11,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ],
         ),
       ),
     );
   }
 
-  Widget buildStorySection({
-    required String title,
-    required List<Story> storyList,
-  }) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-
-      children: [
-        SectionTitle(title: title),
-
-        const SizedBox(height: 15),
-
-        SizedBox(
-          height: 300,
-
-          child: storyList.isEmpty
-              ? const Center(child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(
-              Icons.menu_book_outlined,
-              size: 70,
-              color: Colors.grey,
-            ),
-            SizedBox(height: 16),
-                   Text(
-                    "No stories found",
-                    style: TextStyle(fontSize: 18),
-                 ),
+  Widget _learningBanner() {
+    return Container(
+      padding: const EdgeInsets.all(18),
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [
+            AppColors.primary,
+            AppColors.primary.withValues(alpha: 0.82),
           ],
         ),
-      )
-              : AnimatedSwitcher(
-  duration: const Duration(milliseconds: 350),
+        borderRadius: BorderRadius.circular(26),
+        boxShadow: [
+          BoxShadow(
+            color: AppColors.primary.withValues(alpha: 0.18),
+            blurRadius: 20,
+            offset: const Offset(0, 10),
+          ),
+        ],
+      ),
+      child: const Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Icon(
+            Icons.record_voice_over_rounded,
+            color: Colors.white,
+            size: 34,
+          ),
 
-  child: SizedBox(
-    key: ValueKey(selectedCategory),
-    height: 300,
+          SizedBox(width: 14),
 
-    child: ListView.builder(
-  controller: _storiesController,
-  scrollDirection: Axis.horizontal,
-  physics: const BouncingScrollPhysics(),
-  itemCount: storyList.length,
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Bilingual learning',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 17,
+                    fontWeight: FontWeight.w900,
+                  ),
+                ),
 
-itemBuilder: (context, index) {
-  return StoryCard(
-    story: storyList[index],
-  );
-  },
-)
-  ),
-),
+                SizedBox(height: 4),
+
+                Text(
+                  'Switch between Hausa and English while reading or listening. Great for language growth.',
+                  style: TextStyle(
+                    color: Colors.white70,
+                    height: 1.35,
+                    fontSize: 12,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _emptyCategoryState() {
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.symmetric(
+        horizontal: 24,
+        vertical: 35,
+      ),
+      decoration: BoxDecoration(
+        color: AppColors.primary.withValues(alpha: 0.06),
+        borderRadius: BorderRadius.circular(24),
+        border: Border.all(
+          color: AppColors.primary.withValues(alpha: 0.12),
         ),
-      ],
+      ),
+      child: const Column(
+        children: [
+          Icon(
+            Icons.auto_stories_outlined,
+            size: 48,
+            color: AppColors.primary,
+          ),
+
+          SizedBox(height: 12),
+
+          Text(
+            'Babu labarai tukuna',
+            style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.w900,
+            ),
+          ),
+
+          SizedBox(height: 6),
+
+          Text(
+            'More stories are coming soon.',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: AppColors.muted,
+              height: 1.4,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

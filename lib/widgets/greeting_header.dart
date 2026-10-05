@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../core/constants/app_colors.dart';
+import '../core/constants/app_assets.dart';
 
 class GreetingHeader extends StatelessWidget {
   const GreetingHeader({super.key});
@@ -7,47 +9,24 @@ class GreetingHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        const CircleAvatar(
-          radius: 28,
-          backgroundColor: Color(0xff2E7D32),
-          child: Icon(
-            Icons.child_care,
-            color: Colors.white,
-            size: 30,
+        Container(
+          width: 54, height: 54,
+          padding: const EdgeInsets.all(8),
+          decoration: BoxDecoration(
+            color: AppColors.primary.withValues(alpha: .10),
+            borderRadius: BorderRadius.circular(18),
           ),
+          child: Image.asset(AppAssets.logo, errorBuilder: (_, __, ___) => const Icon(Icons.auto_stories_rounded, color: AppColors.primary)),
         ),
-
-        const SizedBox(width: 15),
-
-        const Expanded(
-          child: Column(
-            crossAxisAlignment:
-                CrossAxisAlignment.start,
-
-            children: [
-              Text(
-                "Sannu da zuwa 👋",
-                style: TextStyle(
-                  color: Colors.grey,
-                ),
-              ),
-
-              SizedBox(height: 4),
-
-              Text(
-                "Hikimar Yara",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 24,
-                ),
-              ),
-            ],
-          ),
-        ),
-
-        IconButton(
-          onPressed: () {},
-          icon: const Icon(Icons.notifications_none),
+        const SizedBox(width: 13),
+        const Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          Text('Sannu da zuwa 👋', style: TextStyle(color: AppColors.muted, fontSize: 13, fontWeight: FontWeight.w600)),
+          SizedBox(height: 2),
+          Text('Hikimar Yara', style: TextStyle(fontSize: 25, fontWeight: FontWeight.w900, letterSpacing: -.5)),
+        ])),
+        Container(
+          decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(16), border: Border.all(color: AppColors.border)),
+          child: const IconButton(onPressed: null, icon: Icon(Icons.notifications_none_rounded)),
         ),
       ],
     );
