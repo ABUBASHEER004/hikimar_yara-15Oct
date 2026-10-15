@@ -410,4 +410,260 @@ Haruna went to bed thinking about the old bicycle and all the new things he woul
     lesson: 'Kula da abubuwa, girmama tarihi, da koyon darasi daga manya suna da amfani.', englishLesson: 'Caring for things, respecting history, and learning from elders are valuable.',
     duration: '5 min',
   ),
+
+  _story(
+    id: '19', title: 'Aisha da Lambun Makaranta', englishTitle: 'Aisha and the School Garden',
+    image: 'assets/images/Alheri.jpg', category: 'Tarbiyya',
+    description: 'Aisha ta nuna yadda haɗin kai da kulawa ke sa abubuwa su bunƙasa.',
+    englishDescription: 'Aisha shows how teamwork and care help things grow.',
+    content: '''Aisha ta lura cewa filin makarantar su babu furanni, kuma ƙasa ta bushe. Ta tambayi malaminsu ko za su iya yin ƙaramin lambu. Malami ya yarda, amma ya ce kowa zai ba da gudummawa.
+
+Wasu yara suka kawo iri, wasu suka nemo tsofaffin bokitai, wasu kuma suka taimaka da ruwa. Aisha ta rubuta jadawalin wanda zai shayar da tsire-tsire kowace rana.
+
+A makon farko, wasu tsire-tsire suka bushe saboda an manta da su. Aisha ba ta zargi kowa ba. Ta kira abokanta suka gyara jadawalin tare. Bayan makonni, furanni suka buɗe, malam buɗe ido suka zo, kuma makarantar ta yi kyau.
+
+Yaran sun fahimci cewa aiki tare yana bukatar haƙuri da ɗaukar nauyi.''',
+    englishContent: '''Aisha noticed that her schoolyard had no flowers and the soil was dry. She asked their teacher if they could create a small garden. He agreed, but said everyone should contribute.
+
+Some children brought seeds, others found old buckets, and others carried water. Aisha made a schedule so the plants would be watered every day.
+
+During the first week, a few plants dried out because someone forgot. Aisha did not blame anyone. She gathered her friends and they improved the schedule together. Weeks later, flowers bloomed, butterflies arrived, and the school looked beautiful.
+
+The children learned that teamwork requires patience and responsibility.''',
+    lesson: 'Haɗin kai, haƙuri da ɗaukar nauyi suna kawo sakamako mai kyau.',
+    englishLesson: 'Teamwork, patience, and responsibility lead to good results.',
+  ),
+  _story(
+    id: '20', title: 'Sani da Gaskiyar Da Ya Faɗa', englishTitle: 'Sani Tells the Truth',
+    image: 'assets/images/Alheri.jpg', category: 'Tarbiyya',
+    description: 'Sani ya gano cewa faɗin gaskiya yana buƙatar ƙarfin hali.',
+    englishDescription: 'Sani discovers that telling the truth takes courage.',
+    content: '''A lokacin wasa, Sani ya buga ƙwallo da ƙarfi har ta fasa tukunyar furen makwabcinsu. Abokansa suka ce masa ya gudu, domin babu wanda ya gan shi.
+
+Sani ya ji tsoro. Ya san mahaifiyarsa za ta yi baƙin ciki, amma ya tuna cewa ta koya masa kada ya ɓoye kuskure. Ya je ya gaya wa makwabcin abin da ya faru, sannan ya nemi afuwa.
+
+Makwabcin ya yi shiru na ɗan lokaci, sai ya ce, “Na ji daɗin gaskiyarka. Kuskure yana faruwa, amma dole mu gyara shi.” Sani ya taimaka wajen share tarkacen, kuma ya yi amfani da kuɗin aljihunsa wajen sayen sabon tukunyar fure.
+
+Sani ya ji sauƙi a zuciyarsa. Ya gane cewa gaskiya tana iya zama da wahala a farko, amma tana gina amana.''',
+    englishContent: '''While playing, Sani kicked the ball so hard that it broke their neighbour’s flowerpot. His friends told him to run away because nobody had seen him.
+
+Sani felt afraid. He knew his mother would be disappointed, but he remembered her advice never to hide a mistake. He told the neighbour what had happened and apologised.
+
+The neighbour was quiet for a moment, then said, “I appreciate your honesty. Mistakes happen, but we must try to make things right.” Sani helped clean up and used his pocket money to buy a new flowerpot.
+
+Sani felt lighter inside. He learned that honesty may be difficult at first, but it builds trust.''',
+    lesson: 'Gaskiya da gyara kuskure suna gina amana.',
+    englishLesson: 'Honesty and making amends build trust.',
+  ),
+  _story(
+    id: '21', title: 'Zaki da Ƙaramin Tsuntsu', englishTitle: 'The Lion and the Little Bird',
+    image: 'assets/images/king.jpg', category: 'Dabbobi',
+    description: 'Zaki ya koyi cewa kowa na iya taimakawa, komai ƙanƙantarsa.',
+    englishDescription: 'A lion learns that everyone can help, no matter how small.',
+    content: '''Wata rana Zaki ya makale da ƙaya a tafinsa. Ya yi ruri, amma sauran dabbobi suka ji tsoro suka gudu. Wani ƙaramin tsuntsu ya tsaya a kan reshe ya tambaye shi ko zai iya taimakawa.
+
+Zaki ya yi mamaki: “Kai ƙarami ne sosai. Ta yaya za ka taimake ni?” Tsuntsun ya nuna masa yadda zai kwantar da ƙafarsa a kan dutse, sannan ya kira Biri wanda ya kawo ƙaramin sandar cire ƙayar.
+
+Da suka cire ƙayar, Zaki ya gode musu. Daga wannan rana bai sake raina wata dabba ba. Ya fahimci cewa ƙarfin jiki ba shi ne kaɗai muhimmanci ba; hankali da taimako ma suna da daraja.''',
+    englishContent: '''One day a thorn became stuck in Lion’s paw. He roared, but the other animals were frightened and ran away. A little bird stayed on a branch and asked if it could help.
+
+Lion was surprised. “You are so small. How could you help me?” The bird showed him how to rest his paw on a rock, then called Monkey, who brought a small stick to remove the thorn.
+
+After the thorn was removed, Lion thanked them. From that day, he never looked down on another animal. He learned that physical strength is not everything; wisdom and helpfulness matter too.''',
+    lesson: 'Kada a raina kowa; kowa na da irin gudummawar da zai bayar.',
+    englishLesson: 'Never look down on anyone; everyone has something to contribute.',
+  ),
+  _story(
+    id: '22', title: 'Kunkuru Mai Kyakkyawar Shawara', englishTitle: 'Tortoise Gives Wise Advice',
+    image: 'assets/images/rabbit.jpg', category: 'Dabbobi',
+    description: 'Dabbobi sun koyi sauraro kafin yanke hukunci.',
+    englishDescription: 'The animals learn to listen before making a decision.',
+    content: '''Dabbobin daji sun sami bishiyar mangwaro mai 'ya'ya kaɗan. Zomo ya ce shi ne ya kamata ya karɓi mafi yawansu saboda shi ne ya fara ganinta. Biri ya ce shi ya kamata ya samu saboda shi ne ya hau bishiyar.
+
+Dabbobin suka fara gardama. Kunkuru ya ce, “Ku tsaya. Mu tuna wanda ya shayar da bishiyar lokacin fari.” Sai suka gano cewa Giwa ce ta kawo ruwa, Tsuntsaye suka watsa iri, kuma sauran dabbobi sun kare ƙananan tsire-tsire.
+
+Sai suka yanke shawarar raba mangwaron daidai, sannan su dasa wasu iri. Kowa ya samu ɗan abin ci, kuma sun shirya samun ƙarin 'ya'ya a nan gaba.
+
+Sun fahimci cewa sauraro da adalci sun fi gardama amfani.''',
+    englishContent: '''The forest animals found a mango tree with only a few fruits. Hare said he deserved most because he had seen it first. Monkey argued that he deserved the most because he could climb it.
+
+The animals began to quarrel. Tortoise said, “Wait. Let us remember who cared for the tree during the dry season.” They realised Elephant had brought water, birds had spread seeds, and other animals had protected the young plants.
+
+They decided to share the mangoes fairly and plant more seeds. Everyone had something to eat, and they prepared for a better harvest in the future.
+
+They learned that listening and fairness are more useful than arguing.''',
+    lesson: 'Adalci da sauraro suna taimaka wa kowa.',
+    englishLesson: 'Fairness and listening help everyone.',
+  ),
+  _story(
+    id: '23', title: 'Yarima Mai Tawali’u', englishTitle: 'The Humble Prince',
+    image: 'assets/images/king.jpg', category: 'Sarakuna',
+    description: 'Yarima ya koyi cewa shugabanci hidima ne, ba girman kai ba.',
+    englishDescription: 'A prince learns that leadership is service, not pride.',
+    content: '''Yarima Nura yana son a kira shi mai girma a ko da yaushe. Ba ya son taimaka wa ma'aikatan fada, kuma yana wucewa ba tare da gaishe da mutane ba.
+
+Wata rana ruwan sama ya lalata gadar da ke kai wa ƙauyen abinci. Nura ya ga dattawa da matasa suna ɗaukar itace da duwatsu domin gyara hanya. Da farko ya so ya koma fada, amma sai ya ajiye rigarsa mai kyau ya taimaka.
+
+Aiki ya yi masa wahala, amma ya ji daɗin ganin mutane sun haɗu. Bayan an gyara gadar, sarki ya ce, “Yau ka nuna abin da ya sa mutum ya zama shugaba.”
+
+Nura ya fahimci cewa mutane suna girmama shugaba saboda ayyukansa da tausayi, ba saboda taken da yake da shi ba.''',
+    englishContent: '''Prince Nura wanted everyone to call him important. He disliked helping the palace workers and often passed people without greeting them.
+
+One day, heavy rain damaged the bridge used to bring food to a nearby village. Nura saw elders and young people carrying wood and stones to repair the path. At first he wanted to return to the palace, but he set aside his fine robe and joined them.
+
+The work was difficult, but he felt happy seeing everyone cooperate. When the bridge was repaired, the king said, “Today you have shown what makes a true leader.”
+
+Nura learned that people respect leaders for their actions and compassion, not their titles.''',
+    lesson: 'Shugabanci na gaskiya hidima ne da tausayi.',
+    englishLesson: 'True leadership means service and compassion.',
+  ),
+  _story(
+    id: '24', title: 'Sarauniya da Rijiyar Gari', englishTitle: 'The Queen and the Village Well',
+    image: 'assets/images/king.jpg', category: 'Sarakuna',
+    description: 'Sarauniya ta haɗa kan al’umma domin kare ruwan da kowa ke bukata.',
+    englishDescription: 'A queen unites her community to protect their shared water.',
+    content: '''Sarauniya Zainab ta lura cewa rijiyar gari tana ƙara datti. Wasu suna zubar da shara kusa da ita, wasu kuma suna wanke tukwane a wurin da ruwan ke shiga.
+
+Ta kira shugabannin unguwanni, yara da manya domin su tattauna. Maimakon ta yi fushi kawai, ta tambayi kowa yadda za su gyara matsalar. Aka tsara ranar tsaftace rijiyar, aka sanya kwandon shara, kuma aka koyar da yara yadda za su kare ruwa.
+
+Bayan wani lokaci, wurin ya zama mai tsafta, kuma mutane suka fara kula da shi. Sarauniya ta yaba wa kowa saboda sun ɗauki matsalar a matsayin aikinsu na bai ɗaya.
+
+Garin ya koyi cewa dukiya ta gama-gari tana bukatar kulawar kowa.''',
+    englishContent: '''Queen Zainab noticed that the village well was becoming dirty. Some people threw rubbish nearby, while others washed pots where water entered the well.
+
+She invited neighbourhood leaders, children, and elders to discuss the problem. Instead of only scolding them, she asked everyone how they could improve things. They organised a cleaning day, placed a rubbish bin nearby, and taught children how to protect water.
+
+After some time, the area became clean and people took better care of it. The queen thanked everyone for treating the problem as a shared responsibility.
+
+The village learned that shared resources need everyone’s care.''',
+    lesson: 'Abubuwan gama-gari suna bukatar kulawa da haɗin kan kowa.',
+    englishLesson: 'Shared resources need everyone’s care and cooperation.',
+  ),
+  _story(
+    id: '25', title: 'Balarabe Mai Barkwanci', englishTitle: 'Balarabe the Funny Neighbour',
+    image: 'assets/images/Alheri.jpg', category: 'Barkwanci',
+    description: 'Barkwanci mai kyau yana faranta rai ba tare da cutar da wani ba.',
+    englishDescription: 'Good humour brings joy without hurting anyone.',
+    content: '''Balarabe ya shahara da barkwanci a unguwa. Wata rana ya ga abokinsa Musa ya zubar da lemu a rigarsa. Ya kusa yi masa dariya a gaban kowa, amma ya lura Musa ya damu.
+
+Sai Balarabe ya kawo ruwa da kyalle ya taimaka masa tsaftace rigar. Daga baya ya ba da labarin yadda shi ma ya taɓa zubar da miya a kan takalmansa yayin liyafa. Kowa ya yi dariya, har Musa ya fara murmushi.
+
+Balarabe ya gane cewa barkwanci ya fi daɗi idan kowa yana jin daɗi. Tun daga wannan rana, ya guji dariya da kuskuren mutane, sai dai ya nemi labarai masu faranta rai ga kowa.''',
+    englishContent: '''Balarabe was famous for making people laugh. One day he saw his friend Musa spill orange drink on his shirt. He almost laughed at him in front of everyone, but noticed Musa was upset.
+
+Balarabe brought water and a cloth to help clean the shirt. Later, he told a story about how he had once spilled soup on his own shoes at a celebration. Everyone laughed, and Musa began to smile too.
+
+Balarabe learned that jokes are best when everyone can enjoy them. From then on, he avoided laughing at people’s mistakes and looked for stories that made everyone feel included.''',
+    lesson: 'Barkwanci mai kyau ba ya wulaƙanta ko kunyata mutane.',
+    englishLesson: 'Good humour does not insult or embarrass others.',
+  ),
+  _story(
+    id: '26', title: 'Dare Mai Taurari', englishTitle: 'The Starry Night',
+    image: 'assets/images/Wata.jpg', category: 'Kafin Barci',
+    description: 'Labari mai laushi game da godiya, iyali da abubuwan al’ajabi na sama.',
+    englishDescription: 'A gentle bedtime story about gratitude, family, and the night sky.',
+    content: '''Kafin barci, Fatima ta zauna a baranda tare da kakarta. Sama ta cika da taurari, iska kuma tana kaɗa ganyen bishiya a hankali.
+
+Fatima ta tambaya, “Kaka, me ya sa taurari suke haskakawa?” Kakarta ta ce ba ta san dukkan amsoshi ba, amma suna iya kallon sararin sama, yin tambayoyi, sannan su koya daga littattafai da malamai.
+
+Suka ambaci abubuwa uku da suka faranta musu rai a ranar: abincin da suka ci, abokiyar da ta taimaki Fatima, da lokacin da suka yi tare. Fatima ta gode wa kakarta, ta shiga ɗaki ta shirya barci cikin kwanciyar hankali.
+
+Ta rufe ido tana tunanin abubuwan da za ta koya gobe.''',
+    englishContent: '''Before bedtime, Fatima sat on the veranda with her grandmother. The sky was full of stars, and the breeze gently moved the tree leaves.
+
+“Grandma, why do stars shine?” Fatima asked. Her grandmother said she did not know every answer, but they could look at the sky, ask questions, and learn from books and teachers.
+
+They each named three things that had made them happy that day: the food they had eaten, a friend who helped Fatima, and the time they had spent together. Fatima thanked her grandmother, went inside, and prepared for sleep peacefully.
+
+She closed her eyes thinking about the things she would learn tomorrow.''',
+    lesson: 'Godiya da son koyo suna kawo farin ciki da kwanciyar hankali.',
+    englishLesson: 'Gratitude and curiosity bring joy and peace.',
+    duration: '4 min',
+  ),
+  _story(
+    id: '27', title: 'Ƙaramar Fitila', englishTitle: 'The Little Lantern',
+    image: 'assets/images/Wata.jpg', category: 'Kafin Barci',
+    description: 'Yarinya ta gano cewa ƙaramin taimako na iya haskaka duhu.',
+    englishDescription: 'A child discovers that even a little help can brighten darkness.',
+    content: '''A daren da wutar lantarki ta yanke, ƙaramar Zarah ta ji tsoron duhun ɗaki. Mahaifinta ya kunna fitila mai ƙaramin haske ya zauna kusa da ita.
+
+Zarah ta lura cewa hasken fitilar bai haskaka gidan gaba ɗaya ba, amma ya isa su ga littafinsu da juna. Ta ɗauko littafin labari, mahaifinta ya karanta mata a hankali.
+
+Bayan labarin, Zarah ta ce, “Fitilar ƙarama ce, amma ta taimaka mana.” Mahaifinta ya amsa, “Haka ma ƙaramar kyautatawa. Ba sai ka yi babban abu ba kafin ka taimaki wani.”
+
+Zarah ta kwanta cikin kwanciyar hankali, tana tunanin yadda za ta taimaka wa abokiyarta gobe.''',
+    englishContent: '''One evening, the electricity went out and little Zarah became frightened by the dark room. Her father switched on a small lantern and sat beside her.
+
+Zarah noticed that the lantern did not light the whole house, but it gave them enough light to see each other and their book. She brought a storybook, and her father read slowly.
+
+After the story, Zarah said, “The lantern is small, but it helped us.” Her father replied, “Small acts of kindness are like that. You do not need to do something enormous to help another person.”
+
+Zarah fell asleep peacefully, thinking about how she could help her friend tomorrow.''',
+    lesson: 'Ƙaramin alheri ma yana iya kawo babban canji.',
+    englishLesson: 'Even a small act of kindness can make a difference.',
+    duration: '4 min',
+  ),
+  _story(
+    id: '28', title: 'Malam Musa da Littafin Sirri', englishTitle: 'Teacher Musa and the Secret Book',
+    image: 'assets/images/Alheri.jpg', category: 'Tarbiyya',
+    description: 'Yara sun gano cewa littafi yana buɗe ƙofa ga sababbin tunani.',
+    englishDescription: 'Children discover that books open doors to new ideas.',
+    content: '''A ɗakin karatu na makaranta akwai wani tsohon littafi mai murfi shuɗi. Yara suna kiran sa littafin sirri saboda ba su taɓa buɗe shi ba.
+
+Wata rana Malam Musa ya buɗe littafin a gabansu. Ba sihiri ba ne a ciki; akwai labaran tsoffin birane, hotunan tsirrai, da tambayoyi masu ban sha’awa. Malamin ya raba yara ƙungiyoyi, kowace ƙungiya ta zaɓi abin da take son bincika.
+
+Hauwa ta koyi yadda ake shuka wake, Bashir ya gano dalilin da ya sa inuwa ke canzawa, Zainab kuma ta rubuta sabon labari. Yara suka fara ziyartar ɗakin karatu kullum.
+
+Sun fahimci cewa abin mamaki na littafi ba sihiri ba ne, ilimi ne da ke sa tunani ya faɗaɗa.''',
+    englishContent: '''In the school library there was an old book with a blue cover. The children called it the secret book because they had never opened it.
+
+One day Teacher Musa opened it in front of them. It contained no magic, but stories of old cities, pictures of plants, and fascinating questions. He divided the children into groups and let each group choose something to investigate.
+
+Hauwa learned how to grow beans, Bashir discovered why shadows change, and Zainab wrote a new story. Soon the children began visiting the library every day.
+
+They learned that a book’s wonder is not magic; it is knowledge that expands the mind.''',
+    lesson: 'Karatu da tambayoyi suna faɗaɗa ilimi da tunani.',
+    englishLesson: 'Reading and asking questions expand knowledge and imagination.',
+  ),
+  _story(
+    id: '29', title: 'Gonar da Ta Ceto Ƙauye', englishTitle: 'The Farm That Helped a Village',
+    image: 'assets/images/saniya.jpg', category: 'Tarbiyya',
+    description: 'Al’umma ta haɗa kai wajen noma da raba amfanin gona.',
+    englishDescription: 'A community works together to farm and share its harvest.',
+    content: '''Lokacin damina ya yi rauni, kuma iyalai da dama sun damu da abinci. Malam Adamu ya ba da shawarar a yi amfani da wani fili da ba a noma ba. Ya gayyaci makwabta su yi aiki tare.
+
+Wasu suka share ciyawa, wasu suka gyara ƙasa, wasu kuma suka tanadi iri. Yara sun taimaka da shayar da tsire-tsire da kuma kiyaye su daga dabbobi. Ba kowane abu ya yi sauƙi ba; kwari sun lalata wasu ganyaye, amma manoma suka nemi shawarar ƙwararru suka magance matsalar.
+
+Lokacin girbi, sun tara kayan lambu da hatsi. Sun raba wa iyalai da suka fi buƙata, sannan suka ajiye iri don kakar gaba. Ƙauyen ya fahimci cewa ilimi da haɗin kai na taimakawa wajen shawo kan ƙalubale.''',
+    englishContent: '''The rainy season was poor, and many families worried about food. Malam Adamu suggested using an unused plot of land. He invited neighbours to work together.
+
+Some cleared weeds, others prepared the soil, and others saved seeds. Children helped water the plants and keep animals away. Not everything was easy: insects damaged some leaves, but the farmers sought expert advice and addressed the problem.
+
+At harvest time, they collected vegetables and grain. They shared food with families who needed it most and saved seeds for the next season. The village learned that knowledge and cooperation help people face challenges.''',
+    lesson: 'Ilimi, haɗin kai da raba amfanin gona suna ƙarfafa al’umma.',
+    englishLesson: 'Knowledge, cooperation, and sharing strengthen a community.',
+  ),
+  _story(
+    id: '30', title: 'Tafiyar Bilkisu zuwa Sabuwar Makaranta', englishTitle: 'Bilkisu’s First Day at a New School',
+    image: 'assets/images/Alheri.jpg', category: 'Tarbiyya',
+    description: 'Bilkisu ta koyi yadda za ta yi abokai ta hanyar kyautatawa da ƙarfin hali.',
+    englishDescription: 'Bilkisu learns to make friends through kindness and courage.',
+    content: '''Bilkisu ta koma wata unguwa, don haka ta fara zuwa sabuwar makaranta. Da safe ta ji kunya, domin ba ta san kowa ba. Ta zauna a ƙarshen aji tana kallon sauran yara suna hira.
+
+Lokacin aikin rukuni, malami ya ce kowa ya gabatar da ra’ayi. Bilkisu ta yi shiru da farko, amma wata yarinya mai suna Rabi ta tambaye ta abin da take tunani. Bilkisu ta ba da shawarar yadda za su tsara hoton da suke zana, kuma ƙungiyar ta yaba mata.
+
+A lokacin hutu, Bilkisu ta raba fensir ɗinta da wani yaro da ya manta nasa. A ƙarshen rana, ta riga ta san sababbin abokai biyu.
+
+Ta fahimci cewa ba dole ba ne ta zama mai magana da yawa don yin abokai; murmushi, sauraro da taimako sun isa su fara.''',
+    englishContent: '''Bilkisu had moved to a new neighbourhood and was starting at a new school. That morning she felt shy because she did not know anyone. She sat at the back of the classroom while the other children chatted.
+
+During group work, the teacher asked everyone to share an idea. Bilkisu was quiet at first, but a girl named Rabi asked what she thought. Bilkisu suggested how they could arrange their drawing, and the group liked her idea.
+
+At break time, Bilkisu shared a pencil with a boy who had forgotten his. By the end of the day, she had already made two new friends.
+
+She learned that she did not need to talk all the time to make friends; a smile, listening, and helping were enough to begin.''',
+    lesson: 'Ƙarfin hali, sauraro da kyautatawa suna taimaka wajen samun abokai.',
+    englishLesson: 'Courage, listening, and kindness help friendships grow.',
+  ),
+
 ];

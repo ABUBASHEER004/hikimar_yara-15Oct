@@ -5,9 +5,13 @@ class TtsService {
 
   Future<void> speak(String text, {required bool english}) async {
     await _tts.stop();
+
+    // Hausa voices often sound clearer at a slower pace with a slightly
+    // lower pitch. Device TTS engines may interpret these values differently.
     await _tts.setLanguage(english ? 'en-US' : 'ha-NG');
-    await _tts.setSpeechRate(english ? 0.45 : 0.30);
-    await _tts.setPitch(1.05);
+    await _tts.setSpeechRate(english ? 0.42 : 0.30);
+    await _tts.setPitch(english ? 1.0 : 0.92);
+    await _tts.awaitSpeakCompletion(true);
     await _tts.speak(text);
   }
 
